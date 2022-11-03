@@ -1,0 +1,112 @@
+@import "src/assets/scss/var";
+
+.notification {
+  width: 360px;
+  padding: 16px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: $shadow_level_2;
+
+  :global {
+    .ant-notification-notice-message {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $color_dark_primary;
+      font-weight: 600;
+      padding-right: 36px;
+    }
+
+    .ant-notification-notice-description {
+      font-size: 14px;
+      line-height: 1.42;
+      color: $color_dark_secondary;
+      margin-left: 0;
+    }
+
+    .ant-notification-notice-with-icon .ant-notification-notice-message {
+      margin-left: 36px;
+    }
+
+    .ant-notification-notice-icon {
+      margin-left: 0;
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+
+        transform: translateX(-50%);
+      }
+    }
+
+    .ant-notification-notice-icon-success {
+      > svg {
+        opacity: 0;
+      }
+
+      &::after {
+        background: url("../../assets/images/icons/success.svg") no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .ant-notification-notice-btn {
+      margin-top: 12px;
+      float: left;
+    }
+
+    .ant-notification-notice-close {
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 4px;
+        right: 0;
+        z-index: 1;
+        background: url("../../assets/images/icons/close.svg") no-repeat;
+        background-size: contain;
+      }
+
+      > span {
+        display: none;
+      }
+    }
+  }
+
+  &_horizontal {
+    width: 510px;
+
+    :global {
+      .ant-notification-notice-content {
+        > div {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+
+          > div:last-child {
+            padding-right: 36px;
+          }
+        }
+      }
+
+      .ant-notification-notice-btn {
+        margin-top: 0;
+      }
+
+      .ant-notification-notice-message {
+        padding-right: 0;
+        margin-bottom: 0;
+      }
+
+      .ant-notification-notice-description {
+        margin-top: 2px;
+      }
+    }
+  }
+}

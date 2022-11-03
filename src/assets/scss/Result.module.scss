@@ -1,0 +1,21 @@
+@import "var";
+
+.result {
+  :global {
+    .ant-result-title {
+      font-weight: 600;
+      font-size: 40px;
+    }
+
+    .ant-result-subtitle {
+      color: $color_dark_secondary;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen_tablet_1) {
+  .result {
+    padding: 0;
+  }
+}

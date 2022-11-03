@@ -1,0 +1,166 @@
+@import "src/assets/scss/var";
+
+.block {
+  padding: 24px;
+  min-height: 125px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  background-color: $color_white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_rating {
+    color: $color_white;
+    background-color: $color_black;
+
+    &_title {
+      margin-bottom: 9px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    &_rate {
+      margin-bottom: 9px;
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 500;
+    }
+  }
+
+  &_profit {
+    color: $color_white;
+    background-color: $color_accent_primary;
+    padding-right: 74px;
+
+    &_money {
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 9px;
+
+      span {
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 48px;
+          height: 48px;
+          position: absolute;
+          bottom: 8px;
+          left: 50%;
+          z-index: 1;
+          background-color: $color_white;
+          filter: blur(20px);
+
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &_text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  &_qr {
+    padding: 41px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
+    &_img {
+      width: 71.5px;
+      height: 71.5px;
+      object-fit: contain;
+    }
+
+    &_text {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: -0.6px;
+    }
+
+    &_number {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 500;
+      letter-spacing: -0.8px;
+    }
+  }
+
+  &_progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-right: 45px;
+
+    &_progressWrapper {
+      width: 60px;
+      height: 60px;
+    }
+
+    &_title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 600;
+      letter-spacing: -0.6px;
+      color: $color_black;
+    }
+
+    &_numbers {
+      color: $color_dark_terteriary;
+      font-size: 14px;
+      line-height: 1.42;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+
+      span {
+        color: $color_black;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen_phone) {
+  .block {
+    width: 100%;
+
+    &_rating,
+    &_qr {
+      width: calc(50% - 12px);
+    }
+
+    &_rating {
+      text-align: center;
+
+      &_title,
+      &_rate {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_profit {
+      padding-right: 24px;
+    }
+
+    &_qr {
+      display: flex;
+      flex-direction: column;
+      padding: 28px 10px;
+      text-align: center;
+
+      &_img {
+        width: 73px;
+        height: 73px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

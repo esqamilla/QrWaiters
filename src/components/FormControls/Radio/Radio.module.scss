@@ -1,0 +1,66 @@
+@import "src/assets/scss/var";
+
+.radio {
+  margin-right: 24px;
+
+  :global {
+    .ant-radio {
+      font-size: 22px;
+
+      &:hover .ant-radio-inner {
+        border-color: $color_accent_primary;
+      }
+
+      &-inner {
+        width: 20px;
+        height: 20px;
+        border-color: $color_dark_terteriary;
+
+        &::after {
+          width: 20px;
+          height: 20px;
+          margin-top: -10px;
+          margin-left: -10px;
+          background-color: $color_white;
+        }
+      }
+
+      &-checked {
+        .ant-radio-inner {
+          border-color: $color_accent_primary;
+          background-color: $color_accent_primary;
+        }
+
+        &::after {
+          border-color: $color_accent_primary;
+        }
+      }
+
+      &-disabled {
+        .ant-radio {
+
+          &-inner {
+            border-color: $color_dark_disabled !important;
+            background-color: $color_dark_background !important;
+
+            &::after {
+              background-color: $color_dark_terteriary !important;
+            }
+          }
+        }
+      }
+
+      &-input {
+        &:focus {
+          outline: 5px auto $color_outline !important;
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .ant-wave {
+    opacity: 0.1;
+  }
+}

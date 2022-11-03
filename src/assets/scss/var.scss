@@ -1,0 +1,48 @@
+// colors
+$color_black: #000000;
+$color_dark_primary: #272937;
+$color_dark_secondary: #272937bf;
+$color_dark_terteriary: #27293759;
+$color_dark_disabled: #2729371f;
+$color_dark_background: #2729370d;
+
+$color_white: #ffffff;
+$color_light_primary: #ffffffed;
+$color_light_secondary: #ffffffa6;
+$color_light_terteriary: #ffffff59;
+$color_light_disabled: #ffffff33;
+$color_light_background: #ffffff1a;
+
+$color_accent_primary: #1f33e8;
+$color_accent_hover: #5cadf6;
+$color_accent_pressed: #0805a0;
+$color_accent_opacity_01: #1f33e81a;
+$color_accent_opacity_015: #1f33e826;
+$color_accent_opacity_02: #1f33e833;
+
+$color_info: #1991ff;
+$color_success: #4fc62b;
+$color_warning: #ffb649;
+$color_danger: #ff3a30;
+$color_outline: #d4e6f6;
+
+$color_background: #fafafa;
+$color_border_grey: #e5e5e7;
+
+// shadows
+$shadow_level_1: 0px 2px 8px rgba(39, 41, 55, 0.08);
+$shadow_level_2: 0px 6px 24px rgba(39, 41, 55, 0.1);
+$shadow_level_3: 0px 10px 40px rgba(39, 41, 55, 0.12);
+$shadow_level_4: 0px 24px 128px rgba(39, 41, 55, 0.14);
+
+// screens
+$screen_desktop_small: 1200px;
+$screen_tablet_1: 992px;
+$screen_tablet_2: 720px;
+$screen_tablet_small: 630px;
+$screen_phone: 576px;
+$screen_phone_small: 374px;
+
+// height
+$height_mobile_menu: 80px;
+$height_tablet_menu: 104px;

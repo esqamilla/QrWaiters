@@ -1,0 +1,86 @@
+@import "src/assets/scss/var";
+
+.icon {
+  path {
+    fill: $color_dark_primary;
+
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &_wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_user {
+    width: 20px;
+    height: 20px;
+  }
+
+  &_arrow {
+    width: 20px;
+    height: 18px;
+  }
+
+  &_qrCode {
+    width: 18px;
+    height: 18px;
+  }
+
+  &_transfer {
+    width: 24px;
+    height: 16px;
+  }
+
+  &_logOut {
+    width: 17px;
+    height: 20px;
+  }
+
+  &_home {
+    width: 22px;
+    height: 19px;
+  }
+
+  &_drop {
+    width: 24px;
+    height: 24px;
+  }
+
+  &_file {
+    width: 16px;
+    height: 20px;
+  }
+
+  &_close {
+    width: 16px;
+    height: 16px;
+  }
+
+  &_star {
+    width: 21px;
+    height: 20px;
+
+    path {
+      fill: $color_white;
+    }
+  }
+
+  &_doorOpen {
+    width: 17px;
+    height: 20px;
+  }
+
+  &_filter {
+    width: 18px;
+    height: 18px;
+  }
+
+  &_closeCircle {
+    width: 21px;
+    height: 20px;
+  }
+}

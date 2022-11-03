@@ -1,0 +1,67 @@
+@import "src/assets/scss/var";
+
+.checkbox {
+  align-items: center;
+
+  > span:global(:not(.ant-checkbox)) {
+    margin-bottom: -5px;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  :global {
+    .ant-checkbox-inner {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      border-color: $color_dark_terteriary !important;
+
+      &::after {
+        border: none;
+        width: 14px;
+        height: 10px;
+        background: url("../../../assets/images/icons/agreement.svg") no-repeat;
+        background-size: contain;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+      }
+    }
+
+    .ant-checkbox-checked {
+      &::after {
+        border: none;
+      }
+
+      .ant-checkbox-inner {
+        background-color: $color_accent_primary;
+        border-color: $color_accent_primary !important;
+      }
+    }
+  }
+
+  &:hover {
+    :global {
+      .ant-checkbox-inner {
+        border-color: $color_accent_primary !important;
+      }
+    }
+  }
+
+  &_topAlign {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &_centerAlign {
+    display: flex;
+    align-items: center;
+  }
+
+  &_bottomAlign {
+    display: flex;
+    align-items: flex-end;
+  }
+}

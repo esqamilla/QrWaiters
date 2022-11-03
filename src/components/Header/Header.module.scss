@@ -1,0 +1,146 @@
+@import "src/assets/scss/var";
+
+.header {
+  height: 105px;
+  padding: 0;
+  background-color: $color_background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $color_dark_disabled;
+}
+
+.link {
+  display: flex !important;
+  align-items: center;
+}
+
+.logo {
+  width: 170px;
+  height: 30px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: $screen_tablet_1) {
+  .btn {
+    min-width: auto;
+  }
+
+  .header {
+    margin: 0 12px;
+
+    &_main {
+      width: calc(100% + 24px);
+      padding: 0 52px 0 44px;
+      height: $height_tablet_menu;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -12px;
+      background-color: $color_white;
+      border-bottom: 1px solid $color_dark_background;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .burger {
+    width: 56px;
+    height: 60px;
+    padding: 19.5px 16px;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      width: 24px;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+      background-color: $color_black;
+
+      transform: translate(-50%, -50%);
+      transition: background-color 0.2s ease-in-out;
+
+      &::before,
+      &::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 100;
+        background-color: $color_black;
+      }
+
+      &::before {
+        bottom: 9px;
+
+        transition: bottom 0.2s ease-in-out, transform 0.38s ease-in-out;
+      }
+
+      &::after {
+        top: 9px;
+
+        transition: top 0.2s ease-in-out, transform 0.38s ease-in-out;
+      }
+    }
+
+    &_open {
+      span {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          bottom: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .balance {
+    width: 225px;
+    margin-bottom: 0;
+  }
+
+  .profile {
+    margin-bottom: 0;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  .btn {
+    padding: 11px 16px;
+    height: 41px;
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    min-width: auto;
+  }
+
+  .header_main {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen_phone_small) {
+  .logo {
+    width: 90px;
+    height: 45px;
+    margin-right: 10px;
+  }
+}

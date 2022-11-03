@@ -1,0 +1,37 @@
+@import "src/assets/scss/var";
+
+.wrapper {
+  width: 196px;
+}
+
+.text {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  margin-bottom: 24px;
+}
+
+.save {
+  margin-top: 24px;
+}
+
+@media (max-width: $screen_phone) {
+  .save {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+
+  }
+
+  .save:global(.ant-btn.ant-btn-loading) {
+    position: absolute;
+  }
+
+  .wrapper {
+    padding-bottom: 24px;
+  }
+}

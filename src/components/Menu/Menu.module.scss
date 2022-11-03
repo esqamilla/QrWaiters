@@ -1,0 +1,109 @@
+@import "src/assets/scss/var";
+
+.menu {
+  border: none;
+
+  :global {
+    .ant-menu-item {
+      margin-top: 0;
+      margin-bottom: 2px !important;
+      padding: 10px !important;
+      height: 44px;
+      line-height: 1.2;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      &:hover {
+        background-color: $color_dark_background;
+        color: $color_dark_primary;
+      }
+
+      &:focus,
+      &:active {
+        background-color: $color_accent_opacity_02;
+      }
+
+      &-selected {
+        background-color: $color_accent_opacity_01 !important;
+        color: $color_accent_primary;
+
+        path {
+          fill: $color_accent_primary;
+        }
+
+        &::after {
+          content: none;
+        }
+
+        &:hover {
+          color: $color_accent_primary;
+        }
+      }
+    }
+
+    .ant-menu-title-content {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_number {
+      font-size: 14px;
+      color: $color_dark_terteriary;
+    }
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  .menu {
+    height: $height_mobile_menu;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-top: 1px solid $color_dark_disabled;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+
+    :global {
+      .ant-menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: calc($height_mobile_menu - 8px);
+        background-color: transparent !important;
+
+        &:hover {
+          color: $color_accent_pressed;
+
+          path {
+            fill: $color_accent_pressed;
+          }
+        }
+      }
+
+      .ant-menu-title-content {
+        margin-left: 0;
+        font-size: 12px;
+        line-height: 1.333;
+        font-weight: 500;
+        margin-top: 4px;
+      }
+    }
+  }
+}

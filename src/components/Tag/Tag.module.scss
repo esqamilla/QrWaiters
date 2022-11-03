@@ -1,0 +1,15 @@
+@import "src/assets/scss/var";
+
+.tag {
+  padding: 2px 8px 2px;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  line-height: 1.5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $color_white;
+}

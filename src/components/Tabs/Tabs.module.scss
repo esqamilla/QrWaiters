@@ -1,0 +1,58 @@
+@import "src/assets/scss/var";
+
+.tabs {
+  :global {
+    .ant-tabs-tab-btn {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .ant-tabs-nav-operations {
+      display: none !important;
+    }
+
+    .ant-tabs-tab {
+      margin-left: 0;
+      padding: 10px 20px;
+
+      &:hover {
+        color: $color_accent_primary;
+      }
+
+      &-active {
+        .ant-tabs-tab-btn {
+          color: $color_accent_primary;
+          text-shadow: none;
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      height: 1px !important;
+      background-color: $color_accent_primary;
+    }
+
+    .ant-tabs-nav::before {
+      border-bottom: 1px solid $color_dark_disabled;
+    }
+
+    .ant-tabs-nav {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  :global {
+    .ant-tabs-nav {
+      margin-left: -12px !important;
+      margin-right: -12px !important;
+    }
+
+    .ant-tabs-content {
+      position: static;
+      margin-bottom: calc(52px); // height btn-large
+    }
+  }
+}

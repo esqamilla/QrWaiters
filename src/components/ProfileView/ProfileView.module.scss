@@ -1,0 +1,48 @@
+@import "src/assets/scss/var";
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.status {
+  font-size: 12px;
+  line-height: 1.333;
+  opacity: 0.75;
+}
+
+.wrapper {
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.exit {
+  display: none;
+}
+
+@media screen and (max-width: $screen_phone) {
+  .wrapper {
+    height: $height_mobile_menu;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 0 24px;
+    background-color: $color_white;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    border-radius: 0 0 20px 20px;
+    border-bottom: 1px solid $color_dark_background;
+  }
+
+  .exit {
+    display: block;
+    margin-right: -10px;
+  }
+}

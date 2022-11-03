@@ -1,0 +1,65 @@
+@import "../../../assets/scss/var";
+
+.input {
+  padding: 14px 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border-color: $color_dark_disabled;
+  color: $color_black;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &:focus,
+  &:active,
+  &:hover {
+    border-color: $color_dark_terteriary;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px $color_dark_disabled !important;
+  }
+
+  &::placeholder {
+    color: $color_dark_terteriary;
+  }
+
+  &_password {
+    padding: 0 20px 0 0;
+    overflow: hidden;
+
+    input {
+      padding: 14px 0 14px 20px !important;
+    }
+
+    :global {
+      .ant-input-password-icon.anticon {
+        width: 24px;
+        height: 24px;
+        background: url("../../../assets/images/icons/eye-open.svg") no-repeat;
+        background-size: contain;
+
+        > svg {
+          display: none !important;
+        }
+      }
+
+      .ant-input-password-icon.anticon.anticon-eye-invisible {
+        background: url("../../../assets/images/icons/eye-hide.svg") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.input:global(.ant-input-affix-wrapper-focused) {
+  box-shadow: 0 0 0 3px $color_dark_disabled !important;
+}
+
+.input_password:global(.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled)) {
+  &:focus,
+  &:active,
+  &:hover {
+    border-color: $color_dark_terteriary;
+  }
+}

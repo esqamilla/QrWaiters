@@ -1,0 +1,52 @@
+@import "src/assets/scss/var";
+
+.layout {
+  max-width: 1320px;
+  margin: 0 auto;
+  min-height: 100vh;
+  border-left: 12px solid transparent;
+  border-right: 12px solid $color_background;
+  background: none;
+}
+
+.content {
+  background-color: $color_background;
+
+  &::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $color_white;
+  }
+}
+
+.contentUnAuth {
+  background-color: $color_background;
+  padding: 50px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: $screen_tablet_1) {
+  .layout {
+    border-color: $color_background;
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  .layout {
+    border-color: $color_background;
+  }
+
+  .contentUnAuth {
+    padding: 40px 12px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

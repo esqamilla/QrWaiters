@@ -1,0 +1,82 @@
+@import "src/assets/scss/var";
+
+.title {
+  color: $color_black;
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  &_child {
+    margin-bottom: 24px;
+  }
+}
+
+.text {
+  color: $color_black;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.separator {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: $color_dark_terteriary;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  gap: 27px;
+}
+
+.block {
+  width: 50%;
+}
+
+.checkbox {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42;
+  color: $color_dark_terteriary;
+}
+
+@media screen and (max-width: $screen_tablet_1) {
+  .blockShadowChoice {
+    max-width: 344px !important;
+    padding: 42px 47px;
+  }
+}
+
+@media screen and (max-width: $screen_tablet_2) {
+  .blockShadow {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  .blockShadow {
+    max-width: 415px !important;
+    padding: 0;
+  }
+  .blockShadowChoice {
+    padding: 0;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .block {
+    width: 100%;
+  }
+}

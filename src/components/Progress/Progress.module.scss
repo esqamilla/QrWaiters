@@ -1,0 +1,58 @@
+@import "src/assets/scss/var";
+
+.progress {
+  :global {
+    .ant-progress-text {
+      font-size: 14px;
+      line-height: 1.42;
+      letter-spacing: -0.1px;
+    }
+
+    .ant-progress-circle-trail {
+      stroke: #d9d9d9;
+    }
+  }
+
+  &_defaultSize {
+    :global {
+      .ant-progress-text {
+        font-size: 12px;
+        line-height: 1.333;
+        letter-spacing: 0.3px;
+      }
+
+      .ant-progress-inner {
+        width: 80px !important;
+        height: 80px !important;
+      }
+    }
+  }
+
+  &_smallSize {
+    :global {
+      .ant-progress-inner {
+        width: 60px !important;
+        height: 60px !important;
+      }
+    }
+  }
+
+  &_largeSize {
+    :global {
+      .ant-progress-inner {
+        width: 100px !important;
+        height: 100px !important;
+      }
+    }
+  }
+}
+
+.icon {
+  &_wrapper {
+    margin: 0 auto;
+  }
+
+  path {
+    fill: $color_accent_primary;
+  }
+}

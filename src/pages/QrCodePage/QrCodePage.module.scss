@@ -1,0 +1,39 @@
+@import "src/assets/scss/var";
+
+.wrapper {
+  width: 196px;
+}
+
+.qrCode {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+.code {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: $screen_phone) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+
+  .qrCode {
+    width: 196px;
+  }
+}

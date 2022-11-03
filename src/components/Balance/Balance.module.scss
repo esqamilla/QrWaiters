@@ -1,0 +1,14 @@
+@import "src/assets/scss/var";
+
+.wrapper {
+  padding: 12px 0;
+  border: 1px solid $color_dark_background;
+  border-right: none;
+  border-left: none;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.text {
+  opacity: 0.35;
+}

@@ -1,0 +1,80 @@
+@import "src/assets/scss/var";
+
+.sider {
+  background-color: $color_white;
+  padding: 25px 12px 40px 0;
+  border-right: 1px solid $color_dark_background;
+
+  :global {
+    .ant-layout-sider-children {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.button_logout {
+  margin-bottom: 0;
+  margin-top: auto;
+  font-size: 16px;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: $color_danger !important;
+
+  path {
+    fill: $color_danger;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: $screen_desktop_small) {
+  .sider {
+    flex: 0 0 250px !important;
+    max-width: 250px !important;
+    min-width: 250px !important;
+    width: 250px !important;
+  }
+}
+
+@media (max-width: $screen_tablet_1) {
+  .profile,
+  .balance {
+    display: none;
+  }
+
+  .button_logout {
+    margin-top: 70px;
+    margin-bottom: auto;
+  }
+
+  .sider {
+    flex: 0 0 244px !important;
+    max-width: 244px !important;
+    min-width: 244px !important;
+    width: 244px !important;
+    padding: 24px 29px;
+    position: fixed;
+    top: $height_tablet_menu;
+    left: 0;
+    z-index: 100;
+    height: calc(100vh - $height_tablet_menu);
+
+    transition: left .4s ease-in-out;
+
+    &_collapsed {
+      left: -244px;
+    }
+  }
+}
+
+@media (max-width: $screen_phone) {
+  .sider {
+    display: none;
+  }
+}

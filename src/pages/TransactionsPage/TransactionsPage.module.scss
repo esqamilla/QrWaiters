@@ -1,0 +1,99 @@
+@import "src/assets/scss/var";
+
+.wrapper {
+  margin-bottom: 25px;
+}
+
+.space {
+  gap: 24px;
+}
+
+.form_wrapper {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile_item,
+.tablet_item {
+  display: none;
+}
+
+.form_btnWrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.filter {
+  &_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 14px;
+  }
+
+  &_btn {
+    min-width: auto;
+    letter-spacing: -0.6px;
+
+    &_finish {
+      margin-top: 24px;
+    }
+  }
+}
+
+.table {
+  :global {
+    .ant-table-cell span {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $screen_tablet_1) {
+  .tablet_item {
+    display: block;
+  }
+
+  .desktop_item_noTablet {
+    display: none;
+  }
+
+  .form {
+    &_btnWrapper {
+      display: flex;
+      gap: 24px;
+    }
+  }
+
+  .space {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: $screen_phone) {
+  .desktop_item,
+  .tablet_item {
+    display: none;
+  }
+
+  .mobile_item {
+    display: block;
+  }
+
+  .space {
+    gap: 0 !important;
+  }
+
+  .wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .page {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
